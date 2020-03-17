@@ -1,5 +1,6 @@
 package fr.formation.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,9 +15,8 @@ public class HopitalService implements IHopitalService {
 	IHopitalRepository hopitalrepository;
 	@Override
 	public List<Hopital> getAllHopital() {
-		
-	
-		return hopitalrepository.findAll();
+
+		return	hopitalrepository.findAll();
 	}
 	@Override
 	public Hopital getHopitalById(long id) {

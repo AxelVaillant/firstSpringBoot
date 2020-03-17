@@ -22,11 +22,13 @@ public class Patient {
 	@JoinColumn(name="medecin")
 	private Medecin idmedecin;
 
-	public Patient(long idpatient, String nompatient, String prenompatient) {
+
+	public Patient(String nompatient, String prenompatient, Hopital nomhopital, Medecin idmedecin) {
 		super();
-		this.idpatient = idpatient;
 		this.nompatient = nompatient;
 		this.prenompatient = prenompatient;
+		this.nomhopital = nomhopital;
+		this.idmedecin = idmedecin;
 	}
 	public Patient() {
 		super();
@@ -66,8 +68,9 @@ public class Patient {
 	@Override
 	public String toString() {
 		return "Patient [idpatient=" + idpatient + ", nompatient=" + nompatient + ", prenompatient=" + prenompatient
-				+ "]";
+				+ ", nomhopital=" + nomhopital + ", idmedecin=" + idmedecin + "]";
 	}
+
 
 	
 
