@@ -9,8 +9,9 @@ public interface IHopitalService  {
 	
 	public List<Hopital> getAllHopital();
 	public Hopital getHopitalById(long id);
-	public int createHopital(Hopital hop);
+	public Hopital createHopital(Hopital hop);
 	public int deleteHopital(long idH);
+	public Hopital updateHopital(Hopital hop);
 	
 
 }

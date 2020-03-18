@@ -50,8 +50,8 @@ public class FirstSpringBootApplication implements CommandLineRunner {
 //		Medecin med=new Medecin();
 //		med.setNommedecin("House");
 //		med.setPrenommedecin("Gregory");
-		Hopital hop12=new Hopital();
-		hop12=hopitalservice.getHopitalById(4);
+//		Hopital hop12=new Hopital();
+//		hop12=hopitalservice.getHopitalById(4);
 //		med.setNomhopital(hop12);
 //		Patient p=new Patient();
 //		p=patientservice.getPatientById(1);
@@ -62,18 +62,18 @@ public class FirstSpringBootApplication implements CommandLineRunner {
 //		System.out.println(listm);
 //		System.out.println(medecinservice.getMedecinById(2));
 //		
-		Patient pat=new Patient();
-		pat.setNompatient("Albatre");
-		pat.setPrenompatient("Josef");
-		pat.setNomhopital(hop12);
-		Medecin med12=new Medecin();
-		med12=medecinservice.getMedecinById(4);
-		pat.setIdmedecin(med12);
-		patientservice.createPatient(pat);
-		List<Patient> listp= new ArrayList<Patient>();
-		listp=	patientservice.getAllPatient();
-		System.out.println(listp);
-		System.out.println(patientservice.getPatientById(2));
+//		Patient pat=new Patient();
+//		pat.setNompatient("Albatre");
+//		pat.setPrenompatient("Josef");
+//		pat.setNomhopital(hop12);
+//		Medecin med12=new Medecin();
+//		med12=medecinservice.getMedecinById(4);
+//		pat.setIdmedecin(med12);
+//		patientservice.createPatient(pat);
+//		List<Patient> listp= new ArrayList<Patient>();
+//		listp=	patientservice.getAllPatient();
+//		System.out.println(listp);
+//		System.out.println(patientservice.getPatientById(2));
 
 
 		

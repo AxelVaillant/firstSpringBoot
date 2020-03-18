@@ -10,6 +10,8 @@ public interface IMedecinService {
 
 	public List<Medecin> getAllMedecin();
 	public Medecin getMedecinById(long id);
-	public int createMedecin(Medecin med);
+	public Medecin createMedecin(Medecin med);
 	public int deleteMedecin(long idM);
+	public Medecin updateMedecin (Medecin med);
+	public Medecin affectMedecin(Medecin med);
 }

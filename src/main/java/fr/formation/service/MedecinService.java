@@ -31,9 +31,9 @@ public class MedecinService implements IMedecinService {
 	}
 
 	@Override
-	public int createMedecin(Medecin med) {
-		medecinrepository.save(med);
-		return 1;
+	public Medecin createMedecin(Medecin med) {
+		
+		return medecinrepository.save(med);
 	}
 
 	@Override
@@ -48,6 +48,20 @@ public class MedecinService implements IMedecinService {
 	}
 
 
+	@Override
+	public Medecin updateMedecin(Medecin med) {
+	
+		return medecinrepository.save(med);
+	}
+
+
+	@Override
+	public Medecin affectMedecin(Medecin med) {
+		
+		return medecinrepository.save(med);
+	}
+
+	
 
 
 

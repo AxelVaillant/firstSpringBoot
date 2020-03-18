@@ -9,6 +9,7 @@ public interface IPatientService {
 
 	public List<Patient> getAllPatient();
 	public Patient getPatientById(long id);
-	public int createPatient(Patient pat);
+	public Patient createPatient(Patient pat);
 	public int deletePatient(long idP);
+	public Patient updatePatient( Patient pat);
 }

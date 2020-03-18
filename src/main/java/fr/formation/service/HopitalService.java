@@ -28,9 +28,9 @@ public class HopitalService implements IHopitalService {
 		return hopital;
 	}
 	@Override
-	public int createHopital(Hopital hop) {
-		hopitalrepository.save(hop);
-		return 1;
+	public Hopital createHopital(Hopital hop) {
+			
+		return hopitalrepository.save(hop);
 	}
 	@Override
 	public int deleteHopital(long idH) {
@@ -42,6 +42,12 @@ public class HopitalService implements IHopitalService {
 		
 		return 1;
 	}
-
+	@Override
+	public Hopital updateHopital(Hopital hop) {
+		
+		return hopitalrepository.save(hop);
+	}
+	
+	
 	
 }

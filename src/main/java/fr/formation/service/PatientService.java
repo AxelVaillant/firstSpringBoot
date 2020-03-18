@@ -30,9 +30,9 @@ public class PatientService implements IPatientService{
 	}
 
 	@Override
-	public int createPatient(Patient pat) {
-		patientrepository.save(pat);
-		return 1;
+	public Patient createPatient(Patient pat) {
+		
+		return patientrepository.save(pat);
 	}
 
 	@Override
@@ -44,6 +44,12 @@ public class PatientService implements IPatientService{
 		}
 		
 		return 1;
+	}
+
+	@Override
+	public Patient updatePatient(Patient pat) {
+		
+		return patientrepository.save(pat);
 	}
 
 
