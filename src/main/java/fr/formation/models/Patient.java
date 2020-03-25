@@ -15,19 +15,17 @@ public class Patient {
 	private long idpatient;
 	private String nompatient;
 	private String prenompatient;
-	@ManyToOne
-	@JoinColumn(name="hopital")
-	private Hopital nomhopital;
+	
 	@OneToOne
 	@JoinColumn(name="medecin")
 	private Medecin idmedecin;
 
 
-	public Patient(String nompatient, String prenompatient, Hopital nomhopital, Medecin idmedecin) {
+	public Patient(String nompatient, String prenompatient, Medecin idmedecin) {
 		super();
 		this.nompatient = nompatient;
 		this.prenompatient = prenompatient;
-		this.nomhopital = nomhopital;
+
 		this.idmedecin = idmedecin;
 	}
 	public Patient() {
@@ -53,12 +51,7 @@ public class Patient {
 		this.prenompatient = prenompatient;
 	}
 	
-	public Hopital getNomhopital() {
-		return nomhopital;
-	}
-	public void setNomhopital(Hopital nomhopital) {
-		this.nomhopital = nomhopital;
-	}
+
 	public Medecin getIdmedecin() {
 		return idmedecin;
 	}
@@ -68,7 +61,7 @@ public class Patient {
 	@Override
 	public String toString() {
 		return "Patient [idpatient=" + idpatient + ", nompatient=" + nompatient + ", prenompatient=" + prenompatient
-				+ ", nomhopital=" + nomhopital + ", idmedecin=" + idmedecin + "]";
+				+  ", idmedecin=" + idmedecin + "]";
 	}
 
 

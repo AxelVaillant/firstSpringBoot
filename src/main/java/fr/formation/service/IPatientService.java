@@ -12,4 +12,5 @@ public interface IPatientService {
 	public Patient createPatient(Patient pat);
 	public int deletePatient(long idP);
 	public Patient updatePatient( Patient pat);
+	public Patient affectPatient(Patient pat);
 }

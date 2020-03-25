@@ -19,17 +19,15 @@ public class Medecin {
 	@ManyToOne
 	@JoinColumn(name="hopital")
 	private Hopital nomhopital;
-	@ManyToOne
-	@JoinColumn(name="patient")
-	private Patient idpatient;
 
 
-	public Medecin( String nommedecin, String prenommedecin, Hopital nomhopital, Patient idpatient) {
+
+	public Medecin( String nommedecin, String prenommedecin, Hopital nomhopital) {
 		super();
 		this.nommedecin = nommedecin;
 		this.prenommedecin = prenommedecin;
 		this.nomhopital = nomhopital;
-		this.idpatient = idpatient;
+
 	}
 	public Medecin() {
 		super();
@@ -60,16 +58,11 @@ public class Medecin {
 	public void setNomhopital(Hopital nomhopital) {
 		this.nomhopital = nomhopital;
 	}
-	public Patient getIdpatient() {
-		return idpatient;
-	}
-	public void setIdpatient(Patient idpatient) {
-		this.idpatient = idpatient;
-	}
+
 	@Override
 	public String toString() {
 		return "Medecin [idmedecin=" + idmedecin + ", nommedecin=" + nommedecin + ", prenommedecin=" + prenommedecin
-				+ ", nomhopital=" + nomhopital + ", idpatient=" + idpatient + "]";
+				+ ", nomhopital=" + nomhopital  + "]";
 	}
 
 

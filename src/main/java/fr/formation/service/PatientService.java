@@ -52,6 +52,12 @@ public class PatientService implements IPatientService{
 		return patientrepository.save(pat);
 	}
 
+	@Override
+	public Patient affectPatient(Patient pat) {
+		
+		return patientrepository.save(pat);
+	}
+
 
 
 }

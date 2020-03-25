@@ -50,24 +50,21 @@ public class FirstSpringBootApplication implements CommandLineRunner {
 //		Medecin med=new Medecin();
 //		med.setNommedecin("House");
 //		med.setPrenommedecin("Gregory");
-//		Hopital hop12=new Hopital();
-//		hop12=hopitalservice.getHopitalById(4);
-//		med.setNomhopital(hop12);
-//		Patient p=new Patient();
-//		p=patientservice.getPatientById(1);
-//		med.setIdpatient(p);
-//		medecinservice.createMedecin(med);
+//	Hopital hop12=new Hopital();
+//		hop12=hopitalservice.getHopitalById(3);
+//	med.setNomhopital(hop12);
+//
+//	medecinservice.createMedecin(med);
 //		List<Medecin> listm= new ArrayList<Medecin>();
 //		listm=medecinservice.getAllMedecin();
 //		System.out.println(listm);
 //		System.out.println(medecinservice.getMedecinById(2));
-//		
+		
 //		Patient pat=new Patient();
-//		pat.setNompatient("Albatre");
-//		pat.setPrenompatient("Josef");
-//		pat.setNomhopital(hop12);
+//		pat.setNompatient("Vaillant");
+//		pat.setPrenompatient("Axel");
 //		Medecin med12=new Medecin();
-//		med12=medecinservice.getMedecinById(4);
+//		med12=medecinservice.getMedecinById(2);
 //		pat.setIdmedecin(med12);
 //		patientservice.createPatient(pat);
 //		List<Patient> listp= new ArrayList<Patient>();

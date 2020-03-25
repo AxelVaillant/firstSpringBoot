@@ -3,6 +3,7 @@ package fr.formation.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import fr.formation.service.IHopitalService;
 
 @RestController
 @RequestMapping("hopital") // URL du webservice
+@CrossOrigin("http://localhost:4200")
 public class HopitalController {
 	@Autowired
 	IHopitalService hopitalservice;
@@ -47,6 +49,8 @@ public class HopitalController {
 	public Hopital updateHopital(@PathVariable long id, @RequestBody Hopital hopital) {
 		Hopital hamodif = hopitalservice.getHopitalById(id);
 		hamodif.setNomhopital(hopital.getNomhopital());
+		hamodif.setLieuhopital(hopital.getLieuhopital());
+		hamodif.setCapacite(hopital.getCapacite());
 		return hopitalservice.updateHopital(hamodif);
 	}
 	

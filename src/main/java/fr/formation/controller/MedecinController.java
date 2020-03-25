@@ -3,6 +3,7 @@ package fr.formation.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +19,7 @@ import fr.formation.service.IPatientService;
 
 @RestController
 @RequestMapping("medecin")
+@CrossOrigin("http://localhost:4200")
 public class MedecinController {
 
 	@Autowired
@@ -45,6 +47,8 @@ public class MedecinController {
 	public Medecin updateMedecin(@PathVariable long id, @RequestBody Medecin med) {
 		Medecin mamodif = medecinservice.getMedecinById(id);
 		mamodif.setNommedecin(med.getNommedecin());
+		mamodif.setPrenommedecin(med.getPrenommedecin());
+		mamodif.setNomhopital(med.getNomhopital());
 		return medecinservice.updateMedecin(mamodif);
 	}
 	
@@ -57,12 +61,12 @@ public class MedecinController {
 		return medecinservice.affectMedecin(mamodif);
 	}
 	
-	@Autowired
-	IPatientService patientservice;
-	@PutMapping("/affectp/{idM}/{idP}")
-	public Medecin affectPatient(@PathVariable long idM, @PathVariable long idP) {
-		Medecin mamodif = medecinservice.getMedecinById(idM);
-		mamodif.setIdpatient(patientservice.getPatientById(idP));
-		return medecinservice.affectMedecin(mamodif);
-	}
+//	@Autowired
+//	IPatientService patientservice;
+//	@PutMapping("/affectp/{idM}/{idP}")
+//	public Medecin affectPatient(@PathVariable long idM, @PathVariable long idP) {
+//		Medecin mamodif = medecinservice.getMedecinById(idM);
+//		mamodif.setIdpatient(patientservice.getPatientById(idP));
+//		return medecinservice.affectMedecin(mamodif);
+//	}
 }
